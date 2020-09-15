@@ -10,13 +10,15 @@
     "build:ui": "rm -rf build && cd ~/Code/JS/fullstackopen/part2/phonebook && npm run build --prod && cp -r build ~/Code/JS/phonebook/backend/",
     "deploy": "git push heroku master",
     "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && npm run deploy",
-    "logs:prod": "heroku logs --tail"
+    "logs:prod": "heroku logs --tail",
+    "lint": "eslint"
   },
   "author": "mino",
   "license": "MIT",
   "devDependencies": {
-    "nodemon": "^2.0.4",
-    "node": "^14.8.0"
+    "eslint": "^7.9.0",
+    "node": "^14.8.0",
+    "nodemon": "^2.0.4"
   },
   "dependencies": {
     "cors": "^2.8.5",
